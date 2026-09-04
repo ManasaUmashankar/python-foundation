@@ -107,15 +107,19 @@ Security Scripts
    UNDERSTAND
      ↓
    SECURE 🔐
+
 </div>
 📊 Progress
+
+<br>
 <div align="center">
 Python Foundation
 <img src="https://progress-bar.dev/100/?title=COMPLETE&width=500" />
 
-<br><br>
+<br/>
 
 <img src="https://img.shields.io/badge/Core_Python-Complete-brightgreen?style=for-the-badge" /> <img src="https://img.shields.io/badge/10_Projects-Complete-brightgreen?style=for-the-badge" /> <img src="https://img.shields.io/badge/Cybersecurity_Foundation-Started-blue?style=for-the-badge" /> </div>
+
 📂 Repository Map
 python-foundation/
 │
@@ -148,7 +152,9 @@ python-foundation/
                        ▼
                 🛠️ Practical Projects
 🚀 What's Next?
+
 <div align="center"> <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&center=true&vCenter=true&width=600&lines=Intermediate+Python+%F0%9F%90%8D;Object-Oriented+Programming;Regular+Expressions;APIs+%26+JSON;Networking+with+Python;Automation;Cybersecurity+Projects+%F0%9F%94%90" /> </div>
+
 📈 The Bigger Goal
 
 I'm not learning Python just to say:
