@@ -1,4 +1,4 @@
-# Python Foundation
+# Python Foundation 1
 
 A structured revision and documentation of the Python fundamentals learned through my beginner projects.
 
