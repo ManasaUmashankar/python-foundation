@@ -1,0 +1,73 @@
+### 1. Variables
+
+Variables are used to store values in Python.
+
+`python
+name = "Manasa"
+age = 19
+2. Data Types
+
+Python provides different built-in data types.
+
+Data Type	Example
+int	10
+float	10.5
+str	"Python"
+bool	True / False
+NoneType	None
+
+To check the type of a value:
+
+x = 10
+print(type(x))
+3. Output — print()
+
+The print() function is used to display output.
+
+print("Hello, Python!")
+print("Age:", 19)
+4. User Input — input()
+
+The input() function is used to receive input from the user.
+
+name = input("Enter your name: ")
+print(name)
+
+input() returns a string by default.
+
+5. Type Casting
+
+Type casting means converting a value from one data type to another.
+
+age = int(input("Enter your age: "))
+height = float(input("Enter your height: "))
+
+Common type-casting functions:
+
+int()
+float()
+str()
+bool()
+6. F-Strings
+
+F-strings are used to insert variables directly into strings.
+
+name = "Manasa"
+age = 19
+
+print(f"My name is {name} and I am {age} years old.")
+💻 Practice
+Programs Created
+Personal Information
+Age Calculator
+Simple Calculator
+Student Profile
+Bill Calculator
+🧠 Key Learnings
+Variables store values.
+Python has different built-in data types.
+print() displays output.
+input() accepts user input.
+input() returns a string by default.
+Type casting converts values between data types.
+F-strings make formatted output easier.
