@@ -4,7 +4,3 @@ ef check_password_length(password):
     return len(password) >= 8
 
 
------------
-Expected output
-Nothing.
-{We're defining the function, not calling it yet,We'll use this function from main.py after we create the package modules}
