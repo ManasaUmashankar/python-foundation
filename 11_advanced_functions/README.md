@@ -50,6 +50,7 @@ def introduce(name, age, course):
 
 
 introduce("Manasa", 19, "BCA")
+```
 
 # Expected Output
 Name: Manasa
@@ -85,12 +86,15 @@ def function_name(parameter=default_value):
  ...
 
 # Code Example
+```
+
 def calculate_discount(price, discount=10):
     final_price = price - (price * discount / 100)
     return final_price
 
 print("Default discount:", calculate_discount(1000))
 print("20% discount:", calculate_discount(1000, 20))
+```
 
 # Expected Output
 Default discount: 900.0
@@ -118,6 +122,7 @@ With keyword arguments, the parameter name tells Python where each value belongs
 3 Syntax
 function_name(parameter=value)
 🔹 Code Example
+```
 def account(username, email, role):
     print("Username:", username)
     print("Email:", email)
@@ -129,7 +134,7 @@ account(
     role="SOC Analyst",
     username="mns123"
 )
-
+```
 # Expected Output
 Username: mns123
 Email: example@gmail.com
@@ -187,10 +192,11 @@ Cybersecurity Connection
 *args can be useful when a security function needs to process a variable number of items.
 
 For example, a function could receive multiple log entries, ports, or security events.
-
+```
 def analyze_events(*events):
     for event in events:
         print("Analyzing:", event)
+```
 5. **kwargs
  Definition :- **kwargs allows a function to accept an arbitrary number of keyword arguments.
 
@@ -202,6 +208,7 @@ Each keyword becomes a dictionary key.
 def function_name(**kwargs):
     ...
 # Code Example
+```
 def user_profile(**details):
     print(details)
 
@@ -212,7 +219,7 @@ user_profile(
     age=22,
     location="Germany"
 )
-
+```
 # Expected Output
 {'name': 'mns', 'role': 'SOC Analyst', 'age': 22, 'location': 'Germany'}
 
@@ -256,7 +263,7 @@ B — Built-in
 # Local Scope
 
 ## A variable created inside a function normally belongs to that function.
-
+```
 def show_name():
     name = "Manasa"
     print(name)
@@ -287,7 +294,7 @@ def test():
 test()
 
 print("Outside:", name)
-
+```
 # Expected Output
 Inside: Local
 Outside: Global
@@ -308,6 +315,7 @@ Explanation
 When multiple values are returned using commas, Python groups them together, typically as a tuple.
 
 # Code Example
+```
 def security_info():
     username = "mns123"
     role = "SOC Analyst"
@@ -319,7 +327,7 @@ name, role = security_info()
 
 print("Username:", name)
 print("Role:", role)
-
+```
 ## Expected Output
 Username: mns123
 Role: SOC Analyst
@@ -356,6 +364,7 @@ Passed as arguments
 Returned from other functions
 
 ## Code Example
+```
 def greet():
     return "Hello"
 
@@ -363,7 +372,7 @@ def greet():
 message = greet
 
 print(message())
-
+```
 ## Expected Output
 Hello
 
@@ -418,14 +427,14 @@ print(square(5))
 25
 
 The equivalent normal function is:
-
+```
 def square(x):
     return x * x
 ## Another Example
 add = lambda a, b: a + b
 
 print(add(10, 20))
-
+```
 Output:
 30
 
@@ -459,6 +468,7 @@ Be easy to understand
 Be reusable in different parts of a program
 
 ## Example
+```
 def calculate_discount(price, discount):
     return price - (price * discount / 100)
 
@@ -467,7 +477,7 @@ The same function can be reused:
 print(calculate_discount(1000, 20))
 print(calculate_discount(500, 10))
 print(calculate_discount(2000, 30))
-
+```
 ##  Expected Output
 800.0
 450.0
@@ -487,7 +497,7 @@ def security_tool():
     # generate hash
 
 we can separate the responsibilities:
-
+```
 def check_password(password):
     ...
 
@@ -502,7 +512,7 @@ def validate_ip(ip):
 
 def generate_hash(data):
     ...
-
+```
 This makes the program easier to understand, test, debug, and maintain.
 
  Cybersecurity Connection
@@ -542,6 +552,7 @@ Each successful requirement adds 1 to the score.
 5   → Strong
 
 ## Project Code
+```
 def check_length(password):
     return len(password) >= 8
 
@@ -600,6 +611,7 @@ level = security_level(score)
 
 print("Score:", score, "/ 5")
 print("Security Level:", level)
+```
 
 ## Example Output
 
