@@ -1,4 +1,3 @@
-# Day 3 - Exception Handling
 # Complete try-except-else-finally example
 
 
