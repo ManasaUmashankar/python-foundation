@@ -59,7 +59,7 @@ def add(a, b):
 
 def subtract(a, b):
     return a - b
-
+```
 Now math_utils.py is a module.
 
 Other Python files can import this module and use its functions.
@@ -96,12 +96,13 @@ Python provides the import statement to use code from another module.
 Syntax
 import module_name
 Example
+```
 import math_utils
 
 result = math_utils.add(10, 5)
 
 print(result)
-
+```
 Output:
 
 15
@@ -122,12 +123,13 @@ Instead of importing the entire module, we can import only the function we need.
 Syntax
 from module_name import function_name
 Example
+```
 from math_utils import add
 
 result = add(10, 5)
 
 print(result)
-
+```
 Output:
 
 15
@@ -144,10 +146,10 @@ add()
 We can import more than one function from a module.
 
 from math_utils import add, subtract
-
+```
 print(add(10, 5))
 print(subtract(10, 5))
-
+```
 Output:
 
 15
@@ -159,10 +161,11 @@ An alias is another name given to a module.
 We use the as keyword.
 
 Example
+```
 import math_utils as mu
 
 print(mu.add(10, 5))
-
+```
 Here:
 
 math_utils → original name
@@ -191,10 +194,10 @@ project/
 └── security_utils.py
 
 security_utils.py:
-
+```
 def is_valid_port(port):
     return 1 <= port <= 65535
-
+```
 main.py:
 
 import security_utils
@@ -214,20 +217,21 @@ For cybersecurity projects, we can create modules containing security-related fu
 Example:
 
 security_utils.py
+```
 def is_strong_password(password):
     return len(password) >= 8
 
 
 def is_valid_port(port):
     return 1 <= port <= 65535
-
+```
 Then another file can use these functions.
-
+```
 import security_utils
 
 print(security_utils.is_strong_password("Cyber123"))
 print(security_utils.is_valid_port(443))
-
+```
 Output:
 
 True
@@ -345,13 +349,13 @@ check_password_length
 13. hash_utils.py
 
 We can create another module inside the same package for hashing.
-
+```
 import hashlib
 
 
 def generate_sha256(data):
     return hashlib.sha256(data.encode()).hexdigest()
-
+```
 Now our package contains two separate responsibilities:
 
 security_tools/
@@ -370,7 +374,7 @@ We can use functions from both modules in main.py.
 from security_tools.password_utils import check_password_length
 from security_tools.hash_utils import generate_sha256
 
-
+```
 password = "Cyber123"
 
 is_valid = check_password_length(password)
@@ -380,7 +384,7 @@ print("Password has 8+ characters:", is_valid)
 password_hash = generate_sha256(password)
 
 print("SHA-256:", password_hash)
-
+```
 Example output:
 
 Password has 8+ characters: True
@@ -414,13 +418,14 @@ It means:
 Run main() only when this file is executed directly.
 
 Example
+```
 def main():
     print("Program started")
 
 
 if __name__ == "__main__":
     main()
-
+```
 If we run:
 
 python main.py
@@ -434,14 +439,14 @@ But if another Python file imports this module, the main() function won't automa
 17. Why Is This Useful?
 
 Suppose main.py contains:
-
+```
 def main():
     print("Running security toolkit")
 
 
 if __name__ == "__main__":
     main()
-
+```
 Now main.py can be:
 
 Run directly
