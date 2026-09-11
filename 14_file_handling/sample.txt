@@ -1,0 +1,2 @@
+Cybersecurity is about protecting systems and data.
+Python can automate many security tasks.
