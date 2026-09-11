@@ -1,19 +1,23 @@
-
+## Security Utility Toolkit
 
 from security_tools.password_utils import check_password_strength
 from security_tools.hash_utils import generate_sha256
 
 
-def main():
-    password = input("Enter a password to check: ")
-
+def display_security_report(checks):
     print("\nPassword Security Check")
     print("-----------------------")
 
-    checks = check_password_strength(password)
-
     for check, result in checks.items():
         print(check + ":", result)
+
+
+def main():
+    password = input("Enter a password to check: ")
+
+    checks = check_password_strength(password)
+
+    display_security_report(checks)
 
     print("\nSHA-256 Hash")
     print("------------")
