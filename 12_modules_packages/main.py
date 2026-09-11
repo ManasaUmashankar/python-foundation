@@ -5,7 +5,7 @@ from security_tools.hash_utils import generate_sha256
 
 
 def main():
-    password = "Cyber123"
+    password = "password = "hello"
 
     # Password utility
     is_valid = check_password_length(password)
