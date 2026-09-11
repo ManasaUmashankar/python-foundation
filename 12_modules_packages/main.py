@@ -1,21 +1,26 @@
-Modules and Packages
 
-from security_tools.password_utils import check_password_length
+
+from security_tools.password_utils import check_password_strength
 from security_tools.hash_utils import generate_sha256
 
 
 def main():
-    password = "password = "hello"
+    password = input("Enter a password to check: ")
 
-    # Password utility
-    is_valid = check_password_length(password)
+    print("\nPassword Security Check")
+    print("-----------------------")
 
-    print("Password has 8+ characters:", is_valid)
+    checks = check_password_strength(password)
 
-    # Hash utility
+    for check, result in checks.items():
+        print(check + ":", result)
+
+    print("\nSHA-256 Hash")
+    print("------------")
+
     password_hash = generate_sha256(password)
 
-    print("SHA-256:", password_hash)
+    print(password_hash)
 
 
 if __name__ == "__main__":
