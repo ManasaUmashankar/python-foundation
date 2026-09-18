@@ -1,11 +1,11 @@
-#os & pathlib🐍
+# os & pathlib🐍
 
 
-##Objective
+## Objective
 The objective of this topic is to learn how Python interacts with the operating system and filesystem, and how to work efficiently with files, directories, and paths using the os and pathlib modules.
 These concepts are useful for building automation scripts, file-management tools, system utilities, and cybersecurity-related programs.
 
-#Topics Covered
+# Topics Covered
 os Module Basics
 Current Working Directory
 Listing Files and Folders
@@ -22,7 +22,7 @@ Path Operations
 os vs pathlib
 Mini Project — Directory & File Inspector
 
-#1. os Module Basics
+# 1. os Module Basics
 Definition:- The os module is a built-in Python module that provides functions for interacting with the operating system.
 
 Explanation:- The os module can be used to work with:
@@ -85,7 +85,7 @@ The exact path depends on the system and execution location.
 Security scripts may need to locate logs, configuration files, reports, or other security-related resources from the current directory.
 ~~~
 
-##3. Listing Files and Folders
+## 3. Listing Files and Folders
 Definition
 
 os.listdir() returns the names of files and directories contained inside a specified directory.
@@ -150,7 +150,7 @@ Investigation data
 Backups
 Logs
 
-#5. Checking Path Existence
+#  5. Checking Path Existence
 Definition:- os.path.exists() checks whether a specified file or directory exists.
 
 Explanation:- The function returns a Boolean value:
@@ -183,7 +183,7 @@ Path does not exist.
 Security scripts can check whether important log files, reports, or configuration files exist before processing them.
 ~~~
 
-#6. Checking Files and Directories
+# 6. Checking Files and Directories
 Definition:-Python provides separate functions to determine whether a path represents a file or a directory.
 
 os.path.isfile() checks for a file.
@@ -214,7 +214,7 @@ security_reports is a directory.
 Security tools often need to distinguish between files and directories before scanning or processing them.
 ~~~
 
-#7. Joining Paths
+# 7. Joining Paths
 Definition:os.path.join() combines multiple path components into a valid filesystem path.
 
 Explanation:-Different operating systems use different path separators.
@@ -251,7 +251,7 @@ security_reports/scan.txt
 
 Proper path construction makes cybersecurity scripts more portable across different operating systems.
 
-#8. pathlib Basics
+# 8. pathlib Basics
 
 Definition:-pathlib is a built-in Python module that provides an object-oriented approach to working with filesystem paths.
 
@@ -275,7 +275,7 @@ sample.txt
 #Cybersecurity Connection:-
 pathlib provides a clean approach for developing cybersecurity utilities that work with files and directories.
 
-#9. Checking Paths with pathlib
+# 9. Checking Paths with pathlib
 Definition:-A Path object provides methods to determine whether a path exists and whether it represents a file or directory.
 
 Important methods include:
@@ -310,7 +310,7 @@ It is a file.
 #Cybersecurity Connection:-
 These checks can be used to verify that security logs, reports, configuration files, or investigation files are available before processing them.
 
-##10. Listing Contents with pathlib
+## 10. Listing Contents with pathlib
 Definition:- Path.iterdir() returns the contents of a directory as Path objects.
 
 Explanation:-iterdir() allows us to loop through files and directories inside a folder.
@@ -343,7 +343,7 @@ The program displays the paths of files and directories inside the current direc
 
 iterdir() can be used as the foundation for tools that inspect and process filesystem contents automatically.
 
-#11. Creating Directories with pathlib
+# 11. Creating Directories with pathlib
 Definition:-Path.mkdir() creates a new directory.
 
 Explanation:-pathlib provides a cleaner way to create directories using a Path object.
@@ -363,10 +363,10 @@ folder.mkdir(exist_ok=True)
 print("Reports directory is ready.")
 ```
 
-#Expected Output:-
+# Expected Output:-
 Reports directory is ready.
 
-##Cybersecurity Connection
+## Cybersecurity Connection
 
 Security programs can automatically create folders for:
 
@@ -376,7 +376,7 @@ Security programs can automatically create folders for:
 -Backups
 -Investigation files
 
-#12. File Properties
+# 12. File Properties
 Definition
 
 Path.stat() returns information about a filesystem object.
@@ -406,10 +406,10 @@ For example:
 
 -File Size: 95 bytes
 
-##Cybersecurity Connection
+## Cybersecurity Connection
 File metadata can be useful during security investigations and filesystem monitoring.
 
-#13. Path Operations
+# 13. Path Operations
 Definition:- pathlib provides properties that allow us to access different components of a filesystem path.
 
 Important properties include:
@@ -457,9 +457,9 @@ Parent: security_reports
 Suffix: .txt
 Stem: scan
 
-##Cybersecurity Connection:-Path operations can help security tools automatically identify and organize log files, scan reports, and other security-related files.
+## Cybersecurity Connection:-Path operations can help security tools automatically identify and organize log files, scan reports, and other security-related files.
 
-#14. os vs pathlib
+# 14. os vs pathlib
 
 Explanation:-Both os and pathlib can be used to work with files, directories, and paths.
 
@@ -488,9 +488,9 @@ path = Path("reports") / "scan.txt"
 print(path)
 ```
 
-#Cybersecurity Connection:-Both approaches can be useful in cybersecurity automation. Understanding both helps when working with existing scripts as well as writing new Python utilities.
+# Cybersecurity Connection:-Both approaches can be useful in cybersecurity automation. Understanding both helps when working with existing scripts as well as writing new Python utilities.
 
-#15. Mini Project — Directory & File Inspector
+# 15. Mini Project — Directory & File Inspector
 
 Definition:- A Directory & File Inspector is a program that examines a directory and displays information about the files and folders it contains.
 
@@ -505,9 +505,9 @@ The project combines:
 -Functions
 -User input
 
-**The program accepts a directory path and displays its contents.
+** The program accepts a directory path and displays its contents.
 
-##Features
+## Features
 -Accept directory path from the user
 -Check whether the directory exists
 -Display the absolute path
@@ -515,7 +515,7 @@ The project combines:
 -Identify files and folders
 -Display file sizes
 
-##Code Example:
+## Code Example:
 ```
 from pathlib import Path
 
@@ -554,7 +554,7 @@ if __name__ == "__main__":
     main()
 ```
 
-#Expected Output:
+# Expected Output:
 
 The exact output depends on the directory being inspected.
 
@@ -569,10 +569,10 @@ Directory: C:\...\15_os_pathlib
 
 [DIR] reports
 
-##Cybersecurity Connection
+## Cybersecurity Connection
 A directory inspector is a basic example of filesystem inspection and automation.
 
-#Similar concepts are used when security tools:
+# Similar concepts are used when security tools:
 
 -Locate security logs
 -Inspect directories
@@ -580,7 +580,7 @@ A directory inspector is a basic example of filesystem inspection and automation
 -Search for specific files
 -Organize investigation data
 
-##16. Security Considerations
+# 16. Security Considerations
 Avoid Uncontrolled File Operations
 Do not automatically delete, overwrite, or modify files without proper validation.
 
@@ -594,7 +594,7 @@ Filesystem operations depend on the permissions of the user running the program.
 Test Automation Safely
 Filesystem automation should first be tested in a safe directory before being used with important data.
 
-##17. Project Structure
+# 17. Project Structure
 
 The project contains:
 
@@ -614,7 +614,7 @@ The project contains:
 -path_operations.py
 -directory_file_inspector.py
 
-##18. What I Learned
+# 18. What I Learned
 By completing this topic, I learned how to:
 ~~~
 -Use the os module
@@ -634,7 +634,7 @@ By completing this topic, I learned how to:
 -Build a Directory & File Inspector
 -Apply filesystem operations to cybersecurity automation
 ~~~
-##19. Key Takeaway
+# 19. Key Takeaway
 
 os and pathlib allow Python programs to interact with the operating system and filesystem.
 These concepts form an important foundation for Python automation and cybersecurity tools, especially when working with files, directories, logs, reports, and investigation data.
